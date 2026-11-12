@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI OEM Helper</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div class="logo">OEM<span>.</span></div>
+            <span class="status">
+                <span class="status-dot"></span>
+                AI Assistant
+            </span>
+        </header>
+
+        <section class="hero">
+            <div class="eyebrow">AUTOMOTIVE INTELLIGENCE</div>
+            <h1>Find the right <span>OEM Part.</span></h1>
+            <p>
+                Describe your vehicle and the part you need.
+                Our AI assistant will search the catalog for matching OEM candidates.
+            </p>
+        </section>
+
+        <section class="search-card">
+            <label for="vehicle-message">What part are you looking for?</label>
+
+            <textarea
+                id="vehicle-message"
+                placeholder="Example: هوبات كامري 2026 أمامي&#10;Or: Front brake discs for Toyota Camry 2026"
+                rows="4"
+            ></textarea>
+
+            <div class="input-footer">
+                <span>Supports Arabic and English</span>
+                <button id="search-button" type="button">
+                    <span id="button-text">Search Catalog</span>
+                    <span aria-hidden="true">↗</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="result-section" class="result-section hidden">
+            <div class="result-heading">
+                <h2>Search Results</h2>
+                <span id="result-status" class="result-status"></span>
+            </div>
+
+            <div id="result-message" class="result-message"></div>
+            <div id="parts-list" class="parts-list"></div>
+        </section>
+
+        <footer>
+            <span>AI OEM Helper</span>
+            <span>Powered by AI & Vehicle Catalog Data</span>
+        </footer>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
